@@ -7,7 +7,7 @@ const macroExtensions = {
     // Close off a markdown link with the url in the clipboard
     "00000": newMacro()
         .typeAlphanumeric('](')
-        .withModifiers(newMacro().tapKey('v'), ['X_LCTRL'])
+        .withModifiers(newMacro().typeAlphanumeric('v'), ['X_LCTRL'])
         .typeAlphanumeric(')'),
     // Type "-DEV"
     "00001": newMacro()
