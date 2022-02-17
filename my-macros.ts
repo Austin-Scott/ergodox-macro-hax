@@ -33,7 +33,13 @@ const macroExtensions = {
     "00006": newMacro()
         .typeAlphanumeric('/')
         .withShift(newMacro().typeAlphanumeric('...'))
-        .typeAlphanumeric('\n')
+        .typeAlphanumeric('\n'),
+    // Type (k)claw hammer sku
+    "00007": newMacro()
+        .typeAlphanumeric('2434249'),
+    // Goto tomcat JVM directory in linux
+    "00008": newMacro()
+        .typeAlphanumeric('cd /app/tomcat/\n ls\ncd ')
 
 }
 
