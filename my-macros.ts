@@ -39,7 +39,22 @@ const macroExtensions = {
         .typeAlphanumeric('2434249'),
     // Goto tomcat JVM directory in linux
     "00008": newMacro()
-        .typeAlphanumeric('cd /app/tomcat/\n ls\ncd ')
+        .typeAlphanumeric('cd /app/tomcat/\n ls\ncd '),
+    // Firefox window switcher
+    "00009": newMacro()
+        .withModifiers(newMacro().typeAlphanumeric('t'), ['SS_LWIN'])
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_UP'),
+    // IntelliJ window switcher
+    "00010": newMacro()
+        .withModifiers(newMacro().typeAlphanumeric('t'), ['SS_LWIN'])
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_UP')
 
 }
 
