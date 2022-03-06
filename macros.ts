@@ -39,13 +39,7 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
         typeAlphanumeric: (strToType: string, msDelayBetweenStrokes: number = 30) => {
             for (let i = 0; i < strToType.length; i++) {
                 const char = strToType[i]
-                if (char !== char.toLowerCase()) {
-                    self.withShift(newMacro().typeAlphanumeric(char.toLowerCase()))
-                }
-                else if (char !== char.toUpperCase() || (char >= "0" && char <= "9")) {
-                    self.tapKey(`X_${char.toUpperCase()}`, msDelayBetweenStrokes);
-                }
-                else if (char === " ") {
+                if (char === " ") {
                     self.tapKey("X_SPACE")
                 }
                 else if (char === "\n") {
@@ -78,6 +72,9 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                 else if (char === "/") {
                     self.tapKey("X_SLASH")
                 }
+                else if (char === "\\") {
+                    self.tapKey("X_BSLASH")
+                }
                 else if (char === "'") {
                     self.tapKey("X_QUOTE")
                 }
@@ -89,6 +86,24 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                 }
                 else if (char === ')') {
                     self.withShift(newMacro().tapKey("X_0"))
+                }
+                else if (char === ':') {
+                    self.withShift(newMacro().tapKey("X_SEMICOLON"))
+                }
+                else if (char === '?') {
+                    self.withShift(newMacro().tapKey("X_SLASH"))
+                }
+                else if (char === '^') {
+                    self.withShift(newMacro().tapKey("X_6"))
+                }
+                else if (char === '!') {
+                    self.withShift(newMacro().tapKey("X_1"))
+                }
+                else if (char !== char.toLowerCase()) {
+                    self.withShift(newMacro().typeAlphanumeric(char.toLowerCase()))
+                }
+                else if (char !== char.toUpperCase() || (char >= "0" && char <= "9")) {
+                    self.tapKey(`X_${char.toUpperCase()}`, msDelayBetweenStrokes);
                 }
                 else {
                     throw Error("Unsupported char in typeAlphanumeric: " + char + ", use typeRaw instead?")
@@ -167,6 +182,7 @@ export const processAll = (macroMap: {
             newConfig = newConfig.replace(toFind, macro)
         }
     })
+    console.log(`--- New keymap file --- \n\n${newConfig}\n--- End keymap file ---`)
     writeFileSync(keymapFile, newConfig)
     console.log("ALL done! Proceed with compilation and flashing")
 };
