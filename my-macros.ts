@@ -48,7 +48,10 @@ const macroExtensions = {
         .tapKey('X_RIGHT')
         .tapKey('X_RIGHT')
         .tapKey('X_RIGHT')
-        .tapKey('X_UP')
+        .tapKey('X_UP'),
+        // Vim jump to start of last line not starting with whitespace
+    "00013": newMacro()
+        .typeAlphanumeric('?^\\w\nzt:noh\n')
 
 }
 
