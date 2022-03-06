@@ -27,9 +27,7 @@ const macroExtensions = {
         .typeAlphanumeric('TestPa55w0rd!'),
     // Goto next conflict marker
     "00006": newMacro()
-        .typeAlphanumeric('/')
-        .withShift(newMacro().typeAlphanumeric('...'))
-        .typeAlphanumeric('\n'),
+        .typeAlphanumeric('/====\nzz'),
     // Type (k)claw hammer sku
     "00007": newMacro()
         .typeAlphanumeric('2434249'),
