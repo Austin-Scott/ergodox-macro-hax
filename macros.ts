@@ -90,6 +90,9 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                 else if (char === ')') {
                     self.withShift(newMacro().tapKey("X_0"))
                 }
+                else if (char === ':') {
+                    self.withShift(newMacro().tapKey("X_SEMICOLON"))
+                }
                 else {
                     throw Error("Unsupported char in typeAlphanumeric: " + char + ", use typeRaw instead?")
                 }
