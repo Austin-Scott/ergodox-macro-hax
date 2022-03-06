@@ -79,7 +79,7 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                     self.tapKey("X_SLASH")
                 }
                 else if (char === "\\") {
-                    self.tapKey("X_BSLS")
+                    self.tapKey("X_BSLASH")
                 }
                 else if (char === "'") {
                     self.tapKey("X_QUOTE")
