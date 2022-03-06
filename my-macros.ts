@@ -50,14 +50,14 @@ const macroExtensions = {
         .tapKey('X_RIGHT')
         .tapKey('X_RIGHT')
         .tapKey('X_UP'),
-    // // VS Code window switcher
-    // "00011": newMacro()
-    //     .withModifiers(newMacro().typeAlphanumeric('t'), ['SS_LWIN'])
-    //     .tapKey('X_RIGHT')
-    //     .tapKey('X_RIGHT')
-    //     .tapKey('X_RIGHT')
-    //     .tapKey('X_RIGHT')
-    //     .tapKey('X_UP'),
+    // VS Code window switcher
+    "00011": newMacro()
+        .withModifiers(newMacro().typeAlphanumeric('t'), ['SS_LWIN'])
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_RIGHT')
+        .tapKey('X_UP'),
     // Type enable-backend: local
     "00012": newMacro()
         .typeAlphanumeric('enable-backend: local'),

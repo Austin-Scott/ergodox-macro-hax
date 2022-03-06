@@ -182,6 +182,7 @@ export const processAll = (macroMap: {
             newConfig = newConfig.replace(toFind, macro)
         }
     })
+    console.log(`--- New keymap file --- \n\n${newConfig}\n--- End keymap file ---`)
     writeFileSync(keymapFile, newConfig)
     console.log("ALL done! Proceed with compilation and flashing")
 };
