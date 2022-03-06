@@ -39,13 +39,7 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
         typeAlphanumeric: (strToType: string, msDelayBetweenStrokes: number = 30) => {
             for (let i = 0; i < strToType.length; i++) {
                 const char = strToType[i]
-                if (char !== char.toLowerCase()) {
-                    self.withShift(newMacro().typeAlphanumeric(char.toLowerCase()))
-                }
-                else if (char !== char.toUpperCase() || (char >= "0" && char <= "9")) {
-                    self.tapKey(`X_${char.toUpperCase()}`, msDelayBetweenStrokes);
-                }
-                else if (char === " ") {
+                if (char === " ") {
                     self.tapKey("X_SPACE")
                 }
                 else if (char === "\n") {
@@ -101,6 +95,12 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                 }
                 else if (char === '^') {
                     self.withShift(newMacro().tapKey("X_6"))
+                }
+                else if (char !== char.toLowerCase()) {
+                    self.withShift(newMacro().typeAlphanumeric(char.toLowerCase()))
+                }
+                else if (char !== char.toUpperCase() || (char >= "0" && char <= "9")) {
+                    self.tapKey(`X_${char.toUpperCase()}`, msDelayBetweenStrokes);
                 }
                 else {
                     throw Error("Unsupported char in typeAlphanumeric: " + char + ", use typeRaw instead?")
