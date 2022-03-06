@@ -96,6 +96,9 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                 else if (char === '^') {
                     self.withShift(newMacro().tapKey("X_6"))
                 }
+                else if (char === '!') {
+                    self.withShift(newMacro().tapKey("X_1"))
+                }
                 else if (char !== char.toLowerCase()) {
                     self.withShift(newMacro().typeAlphanumeric(char.toLowerCase()))
                 }

@@ -24,11 +24,7 @@ const macroExtensions = {
         .typeAlphanumeric('q'),
     // Type low security test account password
     "00005": newMacro()
-        .withShift(newMacro().typeAlphanumeric('t'))
-        .typeAlphanumeric('est')
-        .withShift(newMacro().typeAlphanumeric('p'))
-        .typeAlphanumeric('a55w0rd')
-        .withShift(newMacro().typeAlphanumeric('1')),
+        .typeAlphanumeric('TestPa55w0rd!'),
     // Goto next conflict marker
     "00006": newMacro()
         .typeAlphanumeric('/====\nzz'),
