@@ -88,7 +88,7 @@ export const newMacro: (expectedReplacementCount?: number) => MacroBuilder = (er
                     self.withShift(newMacro().tapKey("X_0"))
                 }
                 else if (char === ':') {
-                    self.withShift(newMacro().tapKey("X_SEMICOLON"))
+                    self.withShift(newMacro().tapKey("X_COLON"))
                 }
                 else if (char === '?') {
                     self.withShift(newMacro().tapKey("X_SLASH"))
