@@ -32,9 +32,9 @@ const macroExtensions = {
     "00007": newMacro()
         .typeAlphanumeric('2434249'),
     // Goto tomcat JVM directory in linux
-    "00008": newMacro()
-        .typeAlphanumeric('cd /app/tomcat/\n ls\ncd ')
-        .tapKey('X_TAB'),
+    // "00008": newMacro()
+    //     .typeAlphanumeric('cd /app/tomcat/\n ls\ncd ')
+    //     .tapKey('X_TAB'),
     // Firefox window switcher
     "00009": newMacro()
         .withModifiers(newMacro().typeAlphanumeric('t'), ['SS_LWIN'])
