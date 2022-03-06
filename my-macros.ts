@@ -62,8 +62,8 @@ const macroExtensions = {
     "00012": newMacro()
         .typeAlphanumeric('enable-backend: local'),
     // Vim jump to start of last line not starting with whitespace
-    "00013": newMacro()
-        .typeAlphanumeric('?^\\w\nzt:noh\n')
+    // "00013": newMacro()
+    //     .typeAlphanumeric('?^\\w\nzt:noh\n')
 
 }
 
