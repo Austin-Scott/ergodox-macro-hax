@@ -17,11 +17,7 @@ const macroExtensions = {
         .typeAlphanumeric('-SNAPSHOT'),
     // Type "MCOMSR-"
     "00003": newMacro()
-        .typeAlphanumeric('MCOMSR-'),
-    // Trigger vim macro
-    "00004": newMacro()
-        .withShift(newMacro().typeAlphanumeric('2'))
-        .typeAlphanumeric('q'),
+        .typeAlphanumeric('MCOM-'),
     // Type low security test account password
     "00005": newMacro()
         .typeAlphanumeric('TestPa55w0rd!'),
@@ -58,12 +54,12 @@ const macroExtensions = {
         .tapKey('X_RIGHT')
         .tapKey('X_RIGHT')
         .tapKey('X_UP'),
-    // Type enable-backend: local
+    // Vim scroll right
     "00012": newMacro()
-        .typeAlphanumeric('enable-backend: local'),
-    // Vim jump to start of last line not starting with whitespace
+        .typeAlphanumeric('zL'),
+    // Vim scroll left
     "00013": newMacro()
-        .typeAlphanumeric('?^\\w\nzt:noh\n')
+        .typeAlphanumeric('zH')
 
 }
 
