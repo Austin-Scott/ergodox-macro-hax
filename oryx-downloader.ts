@@ -24,7 +24,7 @@ export async function getKeymapSourceLink(hashId, revisionId = 'latest') {
 //   })
 //   console.log(data)
 //   return data.data.Layout.revision.zipUrl
-     return 'https://oryx.zsa.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeHBiUWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5b9bfc0207ff70c1e1aec2360450e7a25fa4d143/moonlander_tranquility-base_7Q97w_6r00E.zip'
+     return 'https://oryx.zsa.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNHJmUWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8ebb19a326be55832fcb52bbdcab410fff584e62/moonlander_tranquility-base_7Q97w_roGv7.zip'
 }
 
 export async function unzipKeymapSource(url, path) {
