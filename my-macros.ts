@@ -59,7 +59,17 @@ const macroExtensions = {
         .typeAlphanumeric('zL'),
     // Vim scroll left
     "00013": newMacro()
-        .typeAlphanumeric('zH')
+        .typeAlphanumeric('zH'),
+    // Vim change inner word
+    "00014": newMacro()
+        .typeAlphanumeric('ciw'),
+    // Vim change around word
+    "00015": newMacro()
+        .typeAlphanumeric('caw'),
+    // Vim change inner next (
+    "00016": newMacro()
+        .typeAlphanumeric('f(ci(')
+
 
 }
 
